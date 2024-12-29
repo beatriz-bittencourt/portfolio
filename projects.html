@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Projects</title>
+  </head>
+  <body>
+    <navbar class="pro-teste">
+      <img class="logo" src="./img/img_logo.png" alt="Logo" />
+      <img
+        id="menu-icon"
+        class="menu"
+        src="./img/img_menu.png"
+        alt="Menu"
+        onclick="toggleDropdown()"
+      />
+
+      <div id="dropdown" class="dropdown">
+        <div class="dropdown-header">
+          <img
+            id="close-icon"
+            class="close"
+            src="./img/img_xx.png"
+            alt="Close"
+            onclick="toggleDropdown()"
+          />
+        </div>
+        <div class="topics">
+          <a href="index.html" class="topic t-ab">About Me</a>
+          <a href="#" class="topic">Projects</a>
+          <a href="#" class="topic">Curriculum</a>
+          <a href="#" class="say-hello">Say Hello</a>
+          <div class="medias">
+            <i style="font-size: 24px" class="fa media">&#xf09b;</i>
+            <i style="font-size: 24px" class="fa media">&#xf16d;</i>
+            <i style="font-size: 24px" class="fa media">&#xf08c;</i>
+            <i style="font-size: 24px" class="fa media">&#xf0e0;</i>
+          </div>
+        </div>
+      </div>
+    </navbar>
+
+    <main>
+      <div class="purple-circle"></div>
+      <div class="pro">
+        <h1 class="projects">Projects</h1>
+
+        <div class="my-projects">
+          <div class="smaller">
+            <img src="img/birdhouse.png" alt="" />
+            <div class="info">
+              <h2>Birdhouse</h2>
+              <div class="languages">
+                <h3 class="language">HTML</h3>
+                <h3 class="language">CSS</h3>
+                <h3 class="language">JavaScript</h3>
+                <h3 class="language">Arduino</h3>
+              </div>
+            </div>
+          </div>
+          <div class="bigger one">
+            <div class="info">
+              <h3>hi</h3>
+              <div>
+                <h3 class="language">html</h3>
+                <span class="language"> html </span>
+                <span class="language"> html </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bigger"></div>
+          <div class="smaller"></div>
+
+          <div class="smaller"></div>
+          <div class="bigger"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
