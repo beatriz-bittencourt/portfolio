@@ -28,19 +28,9 @@ navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Garante que o navbar fique acima de outros elementos */
-  transition: background-color 0.3s ease; /* Transição suave */
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
-
-/*.pro-teste {
-  background: linear-gradient(
-    to right,
-    #852685 7%,
-    transparent 14%,
-    transparent 88%,
-    #c1ff53 93%
-  );
-}*/
 
 .logo {
   height: 35px;
@@ -48,7 +38,7 @@ navbar {
 
 .logo.hidden {
   opacity: 0;
-  transform: scale(0.5); /* Reduz o tamanho quando escondido */
+  transform: scale(0.5);
 }
 
 .logo-x {
@@ -170,7 +160,7 @@ navbar {
   position: absolute;
   bottom: 50%;
   right: 13%;
-  transform: translateY(55%); /* Ajuste fino para alinhar no centro */
+  transform: translateY(55%);
 }
 
 .arrow-down {
@@ -286,12 +276,12 @@ footer div i {
 }
 
 .projects {
-  background-color: #fff;
   color: black;
   display: flex;
   justify-content: center;
   margin-top: 8%;
   margin-bottom: 5%;
+  z-index: 100;
 }
 
 .my-projects {
@@ -333,19 +323,21 @@ footer div i {
   margin-bottom: 3%;
   margin-left: 3%;
   color: transparent;
-  position: relative; /* Permite o uso de camadas */
-  overflow: hidden; /* Garante que elementos não saiam do limite */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
 .smaller img,
 .bigger img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* Camada inferior */
+  z-index: 1;
 }
 
 .languages {
@@ -356,7 +348,7 @@ footer div i {
 
 .smaller:hover::after,
 .bigger:hover::after {
-  content: ""; /* Adiciona um gradiente como pseudo-elemento */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -369,8 +361,8 @@ footer div i {
     rgba(0, 0, 0, 0.2) 70%,
     transparent 100%
   );
-  z-index: 2; /* Camada acima da imagem */
-  border-radius: 10px; /* Mantém o mesmo arredondamento */
+  z-index: 2;
+  border-radius: 10px;
 }
 
 .smaller:hover h3,
@@ -378,7 +370,7 @@ footer div i {
 .bigger:hover h3,
 .bigger:hover h2 {
   color: #fff;
-  z-index: 3; /* Textos acima do gradiente */
+  z-index: 3;
 }
 
 .smaller:hover h2,
@@ -390,7 +382,7 @@ footer div i {
 .smaller:hover h3,
 .bigger:hover h3 {
   color: #fff;
-  z-index: 3; /* Textos acima do gradiente */
+  z-index: 3;
   background-color: #808080;
   border-radius: 20px;
   padding: 7px 9px;
@@ -403,7 +395,7 @@ footer div i {
 
 .info {
   position: relative;
-  z-index: 3; /* Assegura que o conteúdo da info esteja acima */
+  z-index: 3;
 }
 
 .info:hover {
@@ -417,11 +409,105 @@ footer div i {
   height: 370px;
 }
 
-/*.purple-circle {
-  width: 1000px;
-  height: 1000px;
-  background: radial-gradient(circle, #ac00e1, #aa4ec6 20%, transparent 70%);
-  border-radius: 50%;
-  margin: -25% 0 0 -25%;
-  z-index: -100;
-}*/
+.absolute {
+  position: fixed;
+  top: 10px !important;
+  inset: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+justify-center {
+  justify-content: center;
+}
+
+.bg-shape1 {
+  width: 700px;
+  height: 700px;
+  border-radius: 9999px;
+  position: relative;
+  animation: one 8s infinite;
+}
+
+.bg-shape2 {
+  width: 700px;
+  height: 700px;
+  border-radius: 9999px;
+  position: relative;
+  animation: two 8s infinite;
+}
+
+@keyframes one {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: -100px;
+    top: 70px;
+  }
+
+  50% {
+    left: 20px;
+    top: 150px;
+  }
+
+  75% {
+    left: 50px;
+    top: 100px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes two {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 50px;
+    top: 10px;
+  }
+
+  50% {
+    left: 100px;
+    top: 50px;
+  }
+
+  75% {
+    left: 50px;
+    top: 100px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.opacity-50 {
+  opacity: 0.7;
+}
+
+.bg-blur {
+  filter: blur(70px);
+}
+
+.bg-primary {
+  background-color: #62645f61;
+}
+
+.bg-teal {
+  background-color: #852685;
+}
+
+.bg-purple {
+  background-color: #c1ff53;
+}
